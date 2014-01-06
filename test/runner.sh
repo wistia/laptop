@@ -33,12 +33,10 @@ for vagrantfile in test/Vagrantfile.*; do
       || failure 'Installation script failed to run'
   fi
 
-  [ "$(vagrant ssh -c 'echo $SHELL')" = '/usr/bin/zsh' ] \
+  vagrant ssh -c '[ "$SHELL" = "/usr/bin/zsh" ]' \
     || failure 'Installation did not set $SHELL to ZSH'
 
-  ruby="$(vagrant ssh -c 'zsh -i -l -c "ruby --version" | cut -d" " -f 1-2')"
-
-  [ "$ruby" = 'ruby 2.0.0p247' ] \
+  vagrant ssh -c 'zsh -i -l -c "ruby --version" | grep -Fq "ruby 2.0.0p353"' \
     || failure 'Installation did not install the correct ruby'
 
   message "$vagrantfile tested successfully, shutting down VM"
