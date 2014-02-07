@@ -13,6 +13,9 @@ fancy_echo "Installing The Silver Searcher (better than ack or grep) to search t
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brew install vim
 
+fancy_echo "Installing macvim from Homebrew ..."
+  brew install macvim
+
 fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
   brew install ctags
 
