@@ -1,5 +1,8 @@
-fancy_echo "Installing Postgres, a good open source relational database ..."
+fancy_echo "Installing Postgres, the database that plays well with Heroku ..."
   brew install postgres --no-python
+
+fancy_echo "Installing mysql, which we use for Wistia apps ..."
+  brew install mysql
 
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
@@ -9,6 +12,9 @@ fancy_echo "Installing The Silver Searcher (better than ack or grep) to search t
 
 fancy_echo "Installing vim from Homebrew to get the latest version ..."
   brew install vim
+
+fancy_echo "Installing macvim from Homebrew ..."
+  brew install macvim
 
 fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
   brew install ctags
