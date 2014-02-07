@@ -1,7 +1,7 @@
 Laptop
 ======
 
-Laptop is a script to set up a Mac OS X or Linux laptop for Rails development.
+Wistia Laptop Setup Script
 
 Requirements
 ------------
@@ -9,12 +9,6 @@ Requirements
 ### Mac OS X
 
 1) Install a C compiler.
-
-For Snow Leopard (10.6): use [OS X GCC
-Installer](https://github.com/kennethreitz/osx-gcc-installer/).
-
-For Lion (10.7) or Mountain Lion (10.8): use [Command Line Tools for
-XCode](https://developer.apple.com/downloads/index.action).
 
 For Mavericks (10.9): run `sudo xcodebuild -license` and follow the instructions
 to accept the XCode agreement.  Then run `xcode-select --install` in your
@@ -24,20 +18,7 @@ terminal and then click "Install".
 
     chsh -s /bin/zsh
 
-### Linux
-
-We support:
-
-* [13.10: Saucy Salamander](https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes),
-* [13.04: Raring Ringtail](https://wiki.ubuntu.com/RaringRingtail/ReleaseNotes),
-* [12.10: Quantal Quetzal](https://wiki.ubuntu.com/QuantalQuetzal/ReleaseNotes), and
-* [12.04 LTS: Precise Pangolin](https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes),
-* Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
-* Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
-
-1) Install zsh and set it as your login shell:
-
-    bash <(wget -qO- https://raw.github.com/thoughtbot/laptop/master/linux-prerequisites)
+3) Install full Xcode app from app store
 
 Install
 -------
@@ -46,13 +27,7 @@ Install
 
 Read, then run the script:
 
-    zsh <(curl -s https://raw.github.com/thoughtbot/laptop/master/mac)
-
-### Linux
-
-Read, then run the script:
-
-    zsh <(wget -qO- https://raw.github.com/thoughtbot/laptop/master/linux)
+    zsh <(curl -s https://raw.github.com/wistia/laptop/master/mac)
 
 What it sets up
 ---------------
@@ -66,6 +41,8 @@ What it sets up
 * Homebrew for managing operating system libraries (OS X only)
 * ImageMagick for cropping and resizing images
 * Postgres for storing relational data
+* macvim for text editing
+* mysql for wistia database magic
 * Qt for headless JavaScript testing via Capybara Webkit
 * Rails gem for writing web applications
 * Rbenv for managing versions of the Ruby programming language
